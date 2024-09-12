@@ -14,7 +14,7 @@ describe('Uma lista vazia de participantes', () => {
     beforeEach(() => {
         (useListaDeParticipantes as jest.Mock).mockReturnValue([])
     })
-    test('Deve ter renderizada sem elementos', () => {
+    test('Deve ser renderizada sem elementos', () => {
         render(
             <RecoilRoot>
                 <ListaParticipantes />
@@ -30,7 +30,7 @@ describe('Uma lista preenchida de participantes', () => {
         (useListaDeParticipantes as jest.Mock).mockReturnValue(participantes)
     })
     const participantes = ['Ana', 'Catarina']
-    test('Deve ter renderizada sem elementos', () => {
+    test('Deve ser renderizada uma lista de participantes', () => {
         render(
             <RecoilRoot>
                 <ListaParticipantes />
